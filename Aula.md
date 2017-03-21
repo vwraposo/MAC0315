@@ -147,6 +147,7 @@ Obs.:
 \]
 
 ---
+
 # Aula 3 - 14/03
 
 \[
@@ -187,4 +188,162 @@ Obs:
         x \geq 0 \Leftrightarrow x \geqq 0 \text{ e } x !=  0 \\
         x > 0 \Leftrightarrow x_i > 0, \forall i
     \end{array}
+\]
+
+---
+
+# Aula  16/03
+
+#### Problema:
+
+\[
+    min\{c'x : A.x = b, x \geqq 0\}
+\]
+
+Restrições lineares:
+\[
+    a^ix \leqq b_i \rightarrow Ax \leqq b\\
+    a^ix  = b_i \rightarrow Ax = b\\
+    a^ix \geqq b_i \rightarrow Ax \geqq b
+\]
+
+Queremos mostrar que é possivel escrever um problema como um problema equivalente com uma restrição diferente ($\leqq, =, \geqq$)
+
+Exemplo:
+
+\[
+    Ax = b \\
+    x \geqq 0 \Leftrightarrow Ix \geqq 0 \Leftrightarrow -Ix \leqq 0
+\]
+
+\[
+    Ax = b \Leftrightarrow
+    \begin{cases}
+        Ax \leqq b\\
+        Ax \geqq b \Leftrightarrow -Ax \leqq -b
+    \end{cases} \\
+\]
+\[
+    \left.\begin{array}{lr}
+        Ax = b \\
+        x \geqq 0
+    \end{array}\right\} \equiv
+    \left[\begin{array}{lr}
+        A \\
+        -A \\
+        -I
+    \end{array}\right] x \leqq
+    \left[\begin{array}{lr}
+        b \\
+        -b \\
+        0
+    \end{array}\right]
+\]
+$Ax \leqq b \leftrightarrow Ax = b , x \geqq 0$
+\[
+    x: Ax \leqq b \Rightarrow c - Ax \geqq 0 \\
+    z:= b-Ax \geqq 0 \\
+    Ax + Iz = b \\
+    [A|I]\left[\begin{array}{lr}
+        x \\
+        z
+    \end{array}\right] = b, \quad z \geqq 0
+\]
+
+Subproblema, para de um problema de igualdade $Ax = b$ obter $x \geqq 0$
+\[
+    \alpha \in \mathbb{R} \rightarrow \left(\begin{array}{lr}\alpha^+ \\ \alpha-\end{array}\right) \\
+    \alpha^+ := \alpha, \quad \alpha \geqq 0 \ \text{ ou } \ 0, \quad \alpha < 0\\
+    \alpha^- := -\alpha, \quad \alpha < 0  \\text{ ou } \ 0, \quad \alpha \geq 0 \\
+    [A|-A]\left[\begin{array}{lr}
+        x^+ \\
+        x^-
+    \end{array}\right] = b, \quad (x^, x^-) \geqq 0
+\]
+Obs: Propriedades do operador $\alpha^+$ e $\alpha^-$
+
+\[
+    \alpha^+ - \alpha^- = \alpha \\
+    \alpha^+ + \alpha^- = |\alpha|
+\]
+
+---
+
+# Aula 21/03
+
+Exemplo: $max \ (-1, -1)x$
+\[
+    (0, 1) x \leq 1 \\
+    (1, 1) x \leq 2 \\
+    (1, 0) x \leq 2 \\
+    x \geq 0
+\]
+
+### Definições
+
+**Hiperplano:** $\mathcal{H}_{c, \alpha} := \{x:c'x = \alpha \}$
+
+**Semi-espaço:** $\mathcal{S}_{c, \alpha} := \{x:c'x \leq \alpha \}$
+
+**Poliedro:** interceção de um número finitos de hiperplanos e semi-espaços.
+
+**Contra-exemplo:** $C := \cap\mathcal{S}_{x, r}, x \in \{ x: ||x||^2 = r\}$
+
+Um círculo, que possui infinitos pontos,sendo impossível verificar todos
+
+Exemplos:
+
+1. $\mathbb{R}^n$
+2. $\varnothing$
+3. $X := \{x: Ax = b, x \geqq 0\}$
+4. Bola fechada de norma 1
+
+**Conjunto convexo:** $A$ é convexo $\Leftrightarrow \forall (a^1, a^2, \lambda) \in A\times A\times [0, 1] \Rightarrow a_\lambda := \lambda a^1 + (1-\lambda)a^2 \in A$
+
+> Obs: pensar no vetor $a^1 - a^2$, então $x_\lambda := a^2 + \lambda(a^1 - a^2)$
+
+Exemplos:
+
+1. $H_{c,\alpha}$
+
+\[
+    \forall (x^1, x^2, \lambda) \in H_{c,\alpha} \times H_{c,\alpha} \times [0, 1] \\
+    x_\lambda := \lambda x^1 + (1-\lambda)x^2 \\
+    c'x_\lambda = c' (\lambda x^1 +  (1 - \lambda)x^2) = \\
+    \lambda.c'x^1 + (1-\lambda)c'x^2 = \lambda\alpha + (1-\lambda)\alpha = \alpha_\blacksquare
+\]
+
+2. $S_{c,\alpha}$
+
+\[
+    \forall (x^1, x^2, \lambda) \in S_{c,\alpha} \times S_{c,\alpha} \times [0, 1] \\
+    x_\lambda := \lambda x^1 + (1-\lambda)x^2 \\
+    c'x_\lambda = c' (\lambda x^1 +  (1 - \lambda)x^2) = \\
+    \lambda.c'x^1 + (1-\lambda)c'x^2 \\
+    0 \leqq \lambda \leqq 1 \Rightarrow c'x_\lambda \leq \lambda\alpha + (1-\lambda)\alpha \leq \alpha_\blacksquare
+\]
+
+3. $X$ é convexo
+\[
+    X := \{x: Ax = b, x \geqq 0\} \\
+    \forall (x^1, x^2, \lambda) \in X\times X \times [0, 1] \\
+    x_\lambda := \underbrace{\lambda x^1}_{\geqq 0} + \underbrace{(1 - \lambda)x^2}_{\geqq 0} \geqq 0\\
+    Ax_\lambda = A(\lambda x^1 + (1 - \lambda)x^2) = \lambda Ax^1 + (1 - \lambda)Ax^2 \\
+    \lambda b + (1 - \lambda) b = b_{\ \blacksquare}
+\]
+
+4. $B:= \{x: ||x - \overset{\_}x|| \leqq \Gamma\} (\overset{\_}x\in \mathbb{R}^n )(\Gamma \in \mathbb{R}_{++})$
+
+> Norma \
+> 1. $||x|| \geqq 0$ \
+> 2. $||\lambda x|| = |\lambda|||x||$ \
+> 3. $|| x + y|| \leqq ||x|| + ||y||$
+
+
+\[
+    \forall(x^1, x^2, \lambda)\in B \times B \times [0, 1] \\
+    x_\lambda := \lambda x^1 + (1 - \lambda)x^2 \\
+    ||\lambda x^1 + (1 - \lambda)x^2 - \overset{\_}x|| = ||\lambda x^1 + (1 - \lambda)x^2 - \lambda \overset{\_}x - (1 - \lambda)\overset{\_}x|| =  \\
+    ||\lambda (x^1 - \overset{\_}x) + (1 - \lambda)(x^2 - \overset{\_}x)|| \leqq ||\lambda (x^1 - \overset{\_}x)|| + ||(1 - \lambda)(x^2 - \overset{\_}x)|| = \\
+     \lambda ||(x^1 - \overset{\_}x)|| + (1 - \lambda)||(x^2 - \overset{\_}x)|| \leqq \lambda \Gamma + (1 - \lambda)\Gamma = \Gamma_{\ \blacksquare}
 \]
