@@ -1,12 +1,12 @@
-# MAC 0315 - Otimização Linear
-##### Leônidas - Sala
+# MAC 0315 - OtimizaÃ§Ã£o Linear
+##### LeÃ´nidas - Sala
 
 ##### Bibliografia:
 *  Linear Otimizationn, Bertisimas
 
-##### Informações
-* Comunicação e informação:
-* 2 Avaliações e 1 Sub Aberta
+##### InformaÃ§Ãµes
+* ComunicaÃ§Ã£o e informaÃ§Ã£o:
+* 2 AvaliaÃ§Ãµes e 1 Sub Aberta
 
 ---
 
@@ -14,7 +14,7 @@
 
 Relembrar Algelin:
 
-1. Espaço Vetorial:
+1. EspaÃ§o Vetorial:
 \[
     E : \forall (\alpha, \beta) \in E \times E \Rightarrow
     \begin{cases}
@@ -24,7 +24,7 @@ Relembrar Algelin:
 \]
 
 
-1. T : $\mathbb{R}^n \rightarrow \mathbb{R}^n$ é uma transformação linear $\Leftrightarrow$
+1. T : $\mathbb{R}^n \rightarrow \mathbb{R}^n$ Ã© uma transformaÃ§Ã£o linear $\Leftrightarrow$
 
 \[
         \forall (\alpha, x, y) \in \mathbb{R} \times \mathbb{R}^n \times \mathbb{R} \Rightarrow
@@ -59,7 +59,7 @@ Relembrar Algelin:
     \Rightarrow \{b\} \cup \{a^j\}^n_{j=2} \ l.i.
 \]
 
-    * Vamos provar por contradição. Supondo que $\{b\}\cup\{a^j\}^n_{j=2}$ seja $l.d.$ podemos escrever $b$ da seguinte forma:
+    * Vamos provar por contradiÃ§Ã£o. Supondo que $\{b\}\cup\{a^j\}^n_{j=2}$ seja $l.d.$ podemos escrever $b$ da seguinte forma:
 \[
     b = \sum^n_{i = 2}\lambda_i.a^i \quad  \lambda \in \mathbb{R}^{n-1}
 \]
@@ -67,11 +67,11 @@ Relembrar Algelin:
 \[
     b = \sum^n_{i = 1}\alpha_i.a^i = \alpha_1.a^1 + \sum^n_{i = 2}\alpha_i.a^i = \sum^n_{i = 2}\lambda_i.a^i
 \]
-    Isolando $a^1$ chegamos em uma contradição, observando que $\alpha_1 \neq 0$
+    Isolando $a^1$ chegamos em uma contradiÃ§Ã£o, observando que $\alpha_1 \neq 0$
 \[
     a^1 = \frac{1}{\alpha_1} . \left(\sum^n_{i = 2}\lambda_i.a^i - \sum^n_{i = 2}\alpha_i.a^i \right) = \frac{1}{\alpha_1} . \sum^n_{i = 2}(\lambda_i - \alpha_i)a^i
 \]
-    já que  $\{a^i\}^n_{i=1}$ é $l.i.$ não é possível escrever um termo como combinação linear dos outros (Teorema). $\blacksquare$
+    jÃ¡ que  $\{a^i\}^n_{i=1}$ Ã© $l.i.$ nÃ£o Ã© possÃ­vel escrever um termo como combinaÃ§Ã£o linear dos outros (Teorema). $\blacksquare$
 
     * Prova direta
     \[
@@ -92,36 +92,36 @@ Relembrar Algelin:
 
 # Aula 2 - 9/3
 
-Terminamos a prova do terceiro exercício da aula anterior.
+Terminamos a prova do terceiro exercÃ­cio da aula anterior.
 
 
-**Teorema Fundamental da Indução:**
+**Teorema Fundamental da InduÃ§Ã£o:**
 
-> Podemos tomar a _indução_ como axioma e provar o teorema da _boa ordem_. Mas aqui faremos o contrário.
+> Podemos tomar a _induÃ§Ã£o_ como axioma e provar o teorema da _boa ordem_. Mas aqui faremos o contrÃ¡rio.
 
 \[
     T(n) \text{ vale } (n \in \mathbb{N}) \\
     H_0(\text{base}):T(n_0) \text{ vale } (n_0 \in \mathbb{N}) \\
     H_1(\text{passo}):n \geq n_0, \ T(n) \text{ vale } \Rightarrow T(n+1) \text{ vale} \\
-    \text{Então } T(n) \text{ vale } \forall n \geq n_0
+    \text{EntÃ£o } T(n) \text{ vale } \forall n \geq n_0
 \]
 Dem:
 
-Supor por contradição que existe $n \geq n_0: T (n)$ não vale.
+Supor por contradiÃ§Ã£o que existe $n \geq n_0: T (n)$ nÃ£o vale.
 
-Então $\exists \overset{\_}{n} > n_0$, primeiro tal que $T(\overset{\_}{n})$ não vale. Como $\overset{\_}{n}  > n_0 \Rightarrow \overset{\_}{n}-1 \geq n_0$ e $\overset{\_}{n} - 1 \in \mathbb{N}$ de tal modo que $T(\overset{\_}{n}-1)$ vale.
+EntÃ£o $\exists \overset{\_}{n} > n_0$, primeiro tal que $T(\overset{\_}{n})$ nÃ£o vale. Como $\overset{\_}{n}  > n_0 \Rightarrow \overset{\_}{n}-1 \geq n_0$ e $\overset{\_}{n} - 1 \in \mathbb{N}$ de tal modo que $T(\overset{\_}{n}-1)$ vale.
 Por outro lado $H_1$ se aplica e teriamos $T(\overset{\_}{n}-1 + 1) = T(\overset{\_}{n})$ vale.
 
-**Otimização** (Programação):
+**OtimizaÃ§Ã£o** (ProgramaÃ§Ã£o):
 
 \[
 min\left\{\varphi(c): x \in \Omega\right\} \text{ ou }
     max\left\{\varphi(c): x \in \Omega\right\}
 \]
 
-$\varphi ()$ - Função Objetivo
+$\varphi ()$ - FunÃ§Ã£o Objetivo
 
-$x \in \Omega$ : pontos notáveis
+$x \in \Omega$ : pontos notÃ¡veis
 
 Exemplos:
 
@@ -142,7 +142,7 @@ Obs.:
     \Lambda := argmin \{\varphi (x) : x \in \Omega\} \\
     \quad \quad := \{\overset{\_}{x} : \varphi(\overset{\_}{x})\leq \varphi (x), \forall x \in \Omega\} \\
     \\
-    \underbrace{min\{\varphi(x):x \in \Omega\}}_{\Lambda \text{ é a solução  de } \varphi}\equiv \underbrace{max\{-\varphi(x):x \in \Omega\}}_{\overline{\Lambda} \text{ é a solução  de } -\varphi} \\
+    \underbrace{min\{\varphi(x):x \in \Omega\}}_{\Lambda \text{ Ã© a soluÃ§Ã£o  de } \varphi}\equiv \underbrace{max\{-\varphi(x):x \in \Omega\}}_{\overline{\Lambda} \text{ Ã© a soluÃ§Ã£o  de } -\varphi} \\
     \Leftrightarrow \overline{x} \in \Lambda \Leftrightarrow \overline{x} \in \overline{\Lambda}
 \]
 
@@ -154,7 +154,7 @@ Obs.:
     min\{\varphi(x): x \in \Omega\} \equiv  - max\{-\varphi(x):x \in \Omega\} \\
 \]
 
-Usando essa equivalência conseguimos o mesmo conjunto solução e mesmo valor ótimo.
+Usando essa equivalÃªncia conseguimos o mesmo conjunto soluÃ§Ã£o e mesmo valor Ã³timo.
 
 \[
     Co \rightleftarrows^1_2 Cm \\
@@ -164,15 +164,15 @@ Usando essa equivalência conseguimos o mesmo conjunto solução e mesmo valor ótim
 
 Co - Conjunto original
 
-1 = $T$ - Transformação
+1 = $T$ - TransformaÃ§Ã£o
 
-2 = $T^{-1}$ - Transformação inversa
+2 = $T^{-1}$ - TransformaÃ§Ã£o inversa
 
 Cm - Conjunto modificado
 
-Sm - Conjunto solução do conjunto modificado
+Sm - Conjunto soluÃ§Ã£o do conjunto modificado
 
-So - Conjunto solução do conjunto original
+So - Conjunto soluÃ§Ã£o do conjunto original
 
 **Objetivo do Curso**
 
@@ -200,14 +200,14 @@ Obs:
     min\{c'x : A.x = b, x \geqq 0\}
 \]
 
-Restrições lineares:
+RestriÃ§Ãµes lineares:
 \[
     a^ix \leqq b_i \rightarrow Ax \leqq b\\
     a^ix  = b_i \rightarrow Ax = b\\
     a^ix \geqq b_i \rightarrow Ax \geqq b
 \]
 
-Queremos mostrar que é possivel escrever um problema como um problema equivalente com uma restrição diferente ($\leqq, =, \geqq$)
+Queremos mostrar que Ã© possivel escrever um problema como um problema equivalente com uma restriÃ§Ã£o diferente ($\leqq, =, \geqq$)
 
 Exemplo:
 
@@ -279,17 +279,17 @@ Exemplo: $max \ (-1, -1)x$
     x \geq 0
 \]
 
-### Definições
+### DefiniÃ§Ãµes
 
 **Hiperplano:** $\mathcal{H}_{c, \alpha} := \{x:c'x = \alpha \}$
 
-**Semi-espaço:** $\mathcal{S}_{c, \alpha} := \{x:c'x \leq \alpha \}$
+**Semi-espaÃ§o:** $\mathcal{S}_{c, \alpha} := \{x:c'x \leq \alpha \}$
 
-**Poliedro:** interceção de um número finitos de hiperplanos e semi-espaços.
+**Poliedro:** interceÃ§Ã£o de um nÃºmero finitos de hiperplanos e semi-espaÃ§os.
 
 **Contra-exemplo:** $C := \cap\mathcal{S}_{x, r}, x \in \{ x: ||x||^2 = r\}$
 
-Um círculo, que possui infinitos pontos,sendo impossível verificar todos
+Um cÃ­rculo, que possui infinitos pontos,sendo impossÃ­vel verificar todos
 
 Exemplos:
 
@@ -298,9 +298,9 @@ Exemplos:
 3. $X := \{x: Ax = b, x \geqq 0\}$
 4. Bola fechada de norma 1
 
-**Conjunto convexo:** $A$ é convexo $\Leftrightarrow \forall (a^1, a^2, \lambda) \in A\times A\times [0, 1] \Rightarrow a_\lambda := \lambda a^1 + (1-\lambda)a^2 \in A$
+**Conjunto convexo:** $A$ Ã© convexo $\Leftrightarrow \forall (a^1, a^2, \lambda) \in A\times A\times [0, 1] \Rightarrow a_\lambda := \lambda a^1 + (1-\lambda)a^2 \in A$
 
-> Obs: pensar no vetor $a^1 - a^2$, então $x_\lambda := a^2 + \lambda(a^1 - a^2)$
+> Obs: pensar no vetor $a^1 - a^2$, entÃ£o $x_\lambda := a^2 + \lambda(a^1 - a^2)$
 
 Exemplos:
 
@@ -323,7 +323,7 @@ Exemplos:
     0 \leqq \lambda \leqq 1 \Rightarrow c'x_\lambda \leq \lambda\alpha + (1-\lambda)\alpha \leq \alpha_\blacksquare
 \]
 
-3. $X$ é convexo
+3. $X$ Ã© convexo
 \[
     X := \{x: Ax = b, x \geqq 0\} \\
     \forall (x^1, x^2, \lambda) \in X\times X \times [0, 1] \\
@@ -332,7 +332,7 @@ Exemplos:
     \lambda b + (1 - \lambda) b = b_{\ \blacksquare}
 \]
 
-4. $B:= \{x: ||x - \overset{\_}x|| \leqq \Gamma\} (\overset{\_}x\in \mathbb{R}^n )(\Gamma \in \mathbb{R}_{++})$
+4.$B:= \{x: ||x - \overset{\_}{x}|| \leqq \Gamma \}, \overset{\_}{x} \in \mathbb{R}^n \& \Gamma \in \mathbb{R}_+/ \{0\}$
 
 > Norma \
 > 1. $||x|| \geqq 0$ \
@@ -346,4 +346,95 @@ Exemplos:
     ||\lambda x^1 + (1 - \lambda)x^2 - \overset{\_}x|| = ||\lambda x^1 + (1 - \lambda)x^2 - \lambda \overset{\_}x - (1 - \lambda)\overset{\_}x|| =  \\
     ||\lambda (x^1 - \overset{\_}x) + (1 - \lambda)(x^2 - \overset{\_}x)|| \leqq ||\lambda (x^1 - \overset{\_}x)|| + ||(1 - \lambda)(x^2 - \overset{\_}x)|| = \\
      \lambda ||(x^1 - \overset{\_}x)|| + (1 - \lambda)||(x^2 - \overset{\_}x)|| \leqq \lambda \Gamma + (1 - \lambda)\Gamma = \Gamma_{\ \blacksquare}
+\]
+
+---
+
+# Aula 23/03
+
+### ContinuaÃ§Ã£o conjunos convexos
+
+* $A, B \text{ convexos}\nRightarrow A \cup B \text{ convexo}$
+
+> $\not\equiv \forall (A, B) \text{ convexo} \Rightarrow  A \cup B \text{ nÃ£o convexo}$, contra exempo $A = B$
+
+Contra-exemplo
+
+\[
+    A \subset \mathbb{R}: A = \{1\} \text{ convexo} \\
+    B \subset \mathbb{R}: B = \{2\} \text{ convexo}
+    \\
+\]
+
+Sejam $a = 1, b = 2 e \lambda = 0,5 \in [0,1]$. Note que $\lambda a + (1-\lambda)b = 0,5 .1 + 0,5 . 2 = 1,5 \not\in A\cup B \ (1,5 \not\in A \text{ e } 1,5 \not\in B)$
+
+* Complemento: $A \subseteqq E \Rightarrow A^c := \{b : b\in E\text{ \ } A \}$
+
+Complemento de covexo em geral nÃ£o Ã© convexo
+
+
+**Propriedade 1:** $A$ e $B$ convexos $\Rightarrow A\cap B$ convexa
+
+Dem.:
+\[
+    D := A\cap B \\
+    \forall (d^1, d^2, \lambda) \in D \times D\times [0, 1] \\
+    \lambda d^1 + (1 - \lambda)d^2
+\]
+Como $d^i \in A, i = 1, 2$ e a combinaÃ§Ã£o convexa deles $\lambda d^1 + (1 - \lambda)d^2 \in A$ e como $d^i \in B, i = 1, 2$ e a combinaÃ§Ã£o convexa deles $\lambda d^1 + (1 -\lambda)d^2 \in B$. EntÃ£o $\lambda d^1 + (1 - \lambda)d^2 \in A \cap B$.
+
+**Propriedade 2:** CombinaÃ§Ã£o linear de convexos Ã© convexo.
+
+Dem.:
+$\forall (\alpha, \beta) \in \mathbb{R} \times \mathbb{R} $, provar que $\alpha A + \beta B$ Ã© convexo.
+
+\[
+    D:= \alpha A + \beta B \\
+    \forall (d^1, d^2, \lambda) \in D \times D \times [0, 1] \Rightarrow \lambda d^1 + (1 - \lambda)d^2 \\
+    d^i = \alpha a^i + \beta b^i,  \ i = 1, 2; \ (a^i, b^i) \in A \times B \\
+    \lambda(\alpha a^1 + \beta b^1) + (1 - \lambda)(\alpha a^2 + \beta b^2) = \\ \alpha(\lambda a^1 + (1 - \lambda a^2)) + \beta(\lambda b^1 + (1 - \lambda b^2)) \\
+\]
+Seja $v = \lambda a^1 + (1 - \lambda a^2)$ Ã© uma combinaÃ§Ã£o comvexa de A, entÃ£o $v \in A$ e $w = \lambda b^1 + (1 - \lambda b^2)$ Ã© uma combinaÃ§Ã£o comvexa de B, entÃ£o $w \in B$
+
+EntÃ£o
+\[
+    = \alpha v + \beta w \in D_{\ \blacksquare}
+\]
+
+**Propriedade 3:** Soma ou subtraÃ§Ã£o
+
+**Propriedade 4:** TranslaÃ§Ã£o
+
+**Propriedade 5:** produto cartesiano
+
+**Propriedade 6:** transformaÃ§Ã£o linear
+
+Seja $T: A \rightarrow A$
+\[
+    ImT = \{t: t = T(a), a\in A\} \\
+    \forall (T(a^1), T(a^2), \lambda) \in Imt \times Imt \times [0, 1]) \\
+    (T(a^1), T(a^2)) \in ImT \times ImT \\
+    \lambda T(a^1) + (1 - \lambda)T(a^2) = T(\lambda a^1 + (1 - \lambda)a^2)
+\]
+Seja $w = \lambda a^1 + (1 - \lambda)a^2$, $w$ Ã© combinaÃ§Ã£o convexa de A, entÃ£o $w \in A$, portanto $T(w) \in ImT_{\ \blacksquare}$
+
+**Propriedade 7:** interior de convexo Ã© convexo $A$ convexo $\Rightarrow \overset{ \ \ o}{A}$ convexo
+
+\[
+    \overset{ \ \ o}{A} = \{a: \exists \epsilon > 0: B(a, \epsilon) \subseteqq A\}
+\]
+
+Dem.:
+\[
+    \forall (a^1, a^2, \lambda) \in \overset{ \ \ o}{A} \times \overset{ \ \ o}{A} \times [0, 1] \\
+    \Rightarrow \exists \epsilon_1 > 0, \exists \epsilon_2 > 0 \\
+    B(a^i, \epsilon_i) \subseteqq A, i = 1, 2 \\
+    \epsilon := \min\{\epsilon_1, \epsilon_2\} > 0 \\
+    \vdash B:= B(a_\lambda, \epsilon) \subseteqq A \\
+    \forall a \in B \Rightarrow ||a -a_\lambda|| < \epsilon \\
+    \overset{\_}{a}^i := a^i + (a- a_\lambda) \\
+    ||\overset{\_}{a}^1 - a^1|| = ||a^1 + (a- a_\lambda) - a^1|| = ||a - a_\lambda|| < \epsilon \leqq \epsilon_1 \\
+    ||\overset{\_}{a}^2 - a^2|| = ||a^2 + (a- a_\lambda) - a^2|| = ||a - a_\lambda|| < \epsilon \leqq \epsilon_2 \\
+    (\overset{\_}{a}^1, \overset{\_}{a}^2, \lambda) \in A\times A\times [0, 1] \Rightarrow \lambda \overset{\_}{a}^1 + (1-\lambda) \overset{\_}{a}^2 \in A \\
+    \lambda \overset{\_}{a}^1 + (1-\lambda) \overset{\_}{a}^2  = \lambda (a^1 + (a- a_\lambda)) + (1 - \lambda)(a^2 + (a- a_\lambda)) = \\ \lambda a^1 + (1-\lambda)a^2 + a - a_\lambda = a_{\ \blacksquare}
 \]
